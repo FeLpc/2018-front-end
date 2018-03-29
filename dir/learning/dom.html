@@ -1,0 +1,1640 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>了解 DOM、BOM 和 jQuery · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../styles/website.css">
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="fonts.html" />
+    
+    
+    <link rel="prev" href="animation.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../what-is-a-FD.html">
+            
+                <a href="../what-is-a-FD.html">
+            
+                    
+                    什么是前端开发人员？
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../recap.html">
+            
+                <a href="../recap.html">
+            
+                    
+                    2017 年前端开发回顾
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../2018.html">
+            
+                <a href="../2018.html">
+            
+                    
+                    2018 年的期待...
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../practice.html">
+            
+                <a href="../practice.html">
+            
+                    
+                    第一部分：前端实践
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../practice/types-of-front-end-dev.html">
+            
+                <a href="../practice/types-of-front-end-dev.html">
+            
+                    
+                    前端工作职位
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../practice/tech-employed-by-fd.html">
+            
+                <a href="../practice/tech-employed-by-fd.html">
+            
+                    
+                    通用的 Web 技术收录
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../practice/skills.html">
+            
+                <a href="../practice/skills.html">
+            
+                    
+                    前端开发技能
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../practice/fd-dev-for.html">
+            
+                <a href="../practice/fd-dev-for.html">
+            
+                    
+                    前端开发人员开发了...
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="../practice/team.html">
+            
+                <a href="../practice/team.html">
+            
+                    
+                    前端开发团队
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" data-path="../practice/myth.html">
+            
+                <a href="../practice/myth.html">
+            
+                    
+                    通才/全栈之神
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.7" data-path="../practice/interview-q.html">
+            
+                <a href="../practice/interview-q.html">
+            
+                    
+                    前端面试题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.8" data-path="../practice/jobboards.html">
+            
+                <a href="../practice/jobboards.html">
+            
+                    
+                    前端工作板
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.9" data-path="../practice/salaries.html">
+            
+                <a href="../practice/salaries.html">
+            
+                    
+                    前端薪资
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.10" data-path="../practice/making-fd.html">
+            
+                <a href="../practice/making-fd.html">
+            
+                    
+                    前端开发者是怎样炼成的
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../learning.html">
+            
+                <a href="../learning.html">
+            
+                    
+                    第二部分：学习前端开发
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="self-direct-learning.html">
+            
+                <a href="self-direct-learning.html">
+            
+                    
+                    自我导向学习
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1.1" data-path="internet.html">
+            
+                <a href="internet.html">
+            
+                    
+                    了解互联网/Web
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.1.2" data-path="browsers.html">
+            
+                <a href="browsers.html">
+            
+                    
+                    了解 Web 浏览器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.1.3" data-path="dns.html">
+            
+                <a href="dns.html">
+            
+                    
+                    了解 DNS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.1.4" data-path="http-networks.html">
+            
+                <a href="http-networks.html">
+            
+                    
+                    了解 HTTP/网络
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.1.5" data-path="hosting.html">
+            
+                <a href="hosting.html">
+            
+                    
+                    了解虚拟主机
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.1.6" data-path="front-end.html">
+            
+                <a href="front-end.html">
+            
+                    
+                    了解通用前端开发
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.1.7" data-path="ui-design-patterns.html">
+            
+                <a href="ui-design-patterns.html">
+            
+                    
+                    了解 UI/交互设计
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.1.8" data-path="html-css.html">
+            
+                <a href="html-css.html">
+            
+                    
+                    了解 HTML 和 CSS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.1.9" data-path="seo.html">
+            
+                <a href="seo.html">
+            
+                    
+                    了解 SEO
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.1.10" data-path="javascript.html">
+            
+                <a href="javascript.html">
+            
+                    
+                    了解 JavaScript
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.1.11" data-path="animation.html">
+            
+                <a href="animation.html">
+            
+                    
+                    了解 Web 动画
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.6.1.12" data-path="dom.html">
+            
+                <a href="dom.html">
+            
+                    
+                    了解 DOM、BOM 和 jQuery
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.1.13" data-path="fonts.html">
+            
+                <a href="fonts.html">
+            
+                    
+                    了解 Web 字体、图标和图像
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.1.14" data-path="accessibility.html">
+            
+                <a href="accessibility.html">
+            
+                    
+                    了解可访问性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.1.15" data-path="web-api.html">
+            
+                <a href="web-api.html">
+            
+                    
+                    了解 Web/浏览器 API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.1.16" data-path="json.html">
+            
+                <a href="json.html">
+            
+                    
+                    了解 JSON
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.1.17" data-path="templates.html">
+            
+                <a href="templates.html">
+            
+                    
+                    了解 JS 模板
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.1.18" data-path="static.html">
+            
+                <a href="static.html">
+            
+                    
+                    了解静态站点生成器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.1.19" data-path="cs.html">
+            
+                <a href="cs.html">
+            
+                    
+                    通过JS学习计算机科学
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.1.20" data-path="front-end-apps.html">
+            
+                <a href="front-end-apps.html">
+            
+                    
+                    了解前端应用程序体系结构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.1.21" data-path="data-api.html">
+            
+                <a href="data-api.html">
+            
+                    
+                    了解 数据 API (例如 JSON/REST) 设计
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.1.22" data-path="react.html">
+            
+                <a href="react.html">
+            
+                    
+                    了解 React
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.1.23" data-path="state.html">
+            
+                <a href="state.html">
+            
+                    
+                    了解状态管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.1.24" data-path="pwa.html">
+            
+                <a href="pwa.html">
+            
+                    
+                    了解渐进式Web应用程序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.1.25" data-path="js-api.html">
+            
+                <a href="js-api.html">
+            
+                    
+                    了解 JS API设计
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.1.26" data-path="browser-dev-tools.html">
+            
+                <a href="browser-dev-tools.html">
+            
+                    
+                    了解 Web 开发工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.1.27" data-path="cli.html">
+            
+                <a href="cli.html">
+            
+                    
+                    学习命令行
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.1.28" data-path="node.html">
+            
+                <a href="node.html">
+            
+                    
+                    学习 Node.js
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.1.29" data-path="module.html">
+            
+                <a href="module.html">
+            
+                    
+                    学习 JS 模块
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.1.30" data-path="module-bundlers-loaders.html">
+            
+                <a href="module-bundlers-loaders.html">
+            
+                    
+                    学习 JS 模块加载器/绑定器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.1.31" data-path="package-manager.html">
+            
+                <a href="package-manager.html">
+            
+                    
+                    学习包管理器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.1.32" data-path="version-control.html">
+            
+                <a href="version-control.html">
+            
+                    
+                    学习版本控制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.1.33" data-path="build.html">
+            
+                <a href="build.html">
+            
+                    
+                    学习构建和任务自动化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.1.34" data-path="perf.html">
+            
+                <a href="perf.html">
+            
+                    
+                    了解网站性能优化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.1.35" data-path="test.html">
+            
+                <a href="test.html">
+            
+                    
+                    学习测试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.1.36" data-path="headless-browsers.html">
+            
+                <a href="headless-browsers.html">
+            
+                    
+                    学习无头浏览器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.1.37" data-path="offline.html">
+            
+                <a href="offline.html">
+            
+                    
+                    学习离线开发
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.1.38" data-path="security.html">
+            
+                <a href="security.html">
+            
+                    
+                    学习 Web/浏览器/应用程序安全
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.1.39" data-path="multi-device-dev.html">
+            
+                <a href="multi-device-dev.html">
+            
+                    
+                    了解多设备开发（例如RWD）
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="direct-learning.html">
+            
+                <a href="direct-learning.html">
+            
+                    
+                    定向学习
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.2.1" data-path="courses.html">
+            
+                <a href="courses.html">
+            
+                    
+                    前端学校、课程和训练营
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="learn-from.html">
+            
+                <a href="learn-from.html">
+            
+                    
+                    前端开发人员学习
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="news-podcasts.html">
+            
+                <a href="news-podcasts.html">
+            
+                    
+                    通讯、新闻和播客
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../tools.html">
+            
+                <a href="../tools.html">
+            
+                    
+                    第三部分：前端开发工具
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../tools/browsedocs.html">
+            
+                <a href="../tools/browsedocs.html">
+            
+                    
+                    文档/API 浏览器工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../tools/seo.html">
+            
+                <a href="../tools/seo.html">
+            
+                    
+                    SEO 工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../tools/proto.html">
+            
+                <a href="../tools/proto.html">
+            
+                    
+                    原型和线框图工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="../tools/diagram.html">
+            
+                <a href="../tools/diagram.html">
+            
+                    
+                    图表工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.5" data-path="../tools/http.html">
+            
+                <a href="../tools/http.html">
+            
+                    
+                    HTTP/网络工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.6" data-path="../tools/code-editor.html">
+            
+                <a href="../tools/code-editor.html">
+            
+                    
+                    代码编辑工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.7" data-path="../tools/browser.html">
+            
+                <a href="../tools/browser.html">
+            
+                    
+                    浏览器工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.8" data-path="../tools/html.html">
+            
+                <a href="../tools/html.html">
+            
+                    
+                    HTML 工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.9" data-path="../tools/css.html">
+            
+                <a href="../tools/css.html">
+            
+                    
+                    CSS 工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.10" data-path="../tools/dom.html">
+            
+                <a href="../tools/dom.html">
+            
+                    
+                    DOM 工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.11" data-path="../tools/js.html">
+            
+                <a href="../tools/js.html">
+            
+                    
+                    JavaScript 工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.12" data-path="../tools/static.html">
+            
+                <a href="../tools/static.html">
+            
+                    
+                    静态站点生成器工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.13" data-path="../tools/accessibility.html">
+            
+                <a href="../tools/accessibility.html">
+            
+                    
+                    辅助功能开发工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.14" data-path="../tools/apps.html">
+            
+                <a href="../tools/apps.html">
+            
+                    
+                    应用程序框架 （桌面、移动端等等） 工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.15" data-path="../tools/state.html">
+            
+                <a href="../tools/state.html">
+            
+                    
+                    状态管理工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.16" data-path="../tools/pwa.html">
+            
+                <a href="../tools/pwa.html">
+            
+                    
+                    渐进式 Web 应用程序工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.17" data-path="../tools/dev-tools.html">
+            
+                <a href="../tools/dev-tools.html">
+            
+                    
+                    GUI 开发/构建工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.18" data-path="../tools/templates.html">
+            
+                <a href="../tools/templates.html">
+            
+                    
+                    模板/数据绑定工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.19" data-path="../tools/ui.html">
+            
+                <a href="../tools/ui.html">
+            
+                    
+                    用户界面小部件和组件工具包
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.20" data-path="../tools/charting.html">
+            
+                <a href="../tools/charting.html">
+            
+                    
+                    数据可视化（例如，图表）工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.21" data-path="../tools/graphics.html">
+            
+                <a href="../tools/graphics.html">
+            
+                    
+                    图形（例如，SVG、canvas、webgl）工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.22" data-path="../tools/animation.html">
+            
+                <a href="../tools/animation.html">
+            
+                    
+                    动画工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.23" data-path="../tools/json.html">
+            
+                <a href="../tools/json.html">
+            
+                    
+                    JSON 工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.24" data-path="../tools/placeholder.html">
+            
+                <a href="../tools/placeholder.html">
+            
+                    
+                    占位符图像/文本工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.25" data-path="../tools/testing.html">
+            
+                <a href="../tools/testing.html">
+            
+                    
+                    测试工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.26" data-path="../tools/db.html">
+            
+                <a href="../tools/db.html">
+            
+                    
+                    前端数据存储工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.27" data-path="../tools/loaders.html">
+            
+                <a href="../tools/loaders.html">
+            
+                    
+                    模块/包装加载工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.28" data-path="../tools/repo.html">
+            
+                <a href="../tools/repo.html">
+            
+                    
+                    模块/包仓库工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.29" data-path="../tools/hosting.html">
+            
+                <a href="../tools/hosting.html">
+            
+                    
+                    主机工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.30" data-path="../tools/project-hosting.html">
+            
+                <a href="../tools/project-hosting.html">
+            
+                    
+                    项目管理和代码托管
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.31" data-path="../tools/comm.html">
+            
+                <a href="../tools/comm.html">
+            
+                    
+                    协作和沟通工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.32" data-path="../tools/cms.html">
+            
+                <a href="../tools/cms.html">
+            
+                    
+                    CMS 托管/API 工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.33" data-path="../tools/baas.html">
+            
+                <a href="../tools/baas.html">
+            
+                    
+                    BAAS（用于前端开发）工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.34" data-path="../tools/offline.html">
+            
+                <a href="../tools/offline.html">
+            
+                    
+                    离线工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.35" data-path="../tools/security.html">
+            
+                <a href="../tools/security.html">
+            
+                    
+                    安全工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.36" data-path="../tools/task.html">
+            
+                <a href="../tools/task.html">
+            
+                    
+                    任务（又名 构建）工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.37" data-path="../tools/deploy.html">
+            
+                <a href="../tools/deploy.html">
+            
+                    
+                    部署工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.38" data-path="../tools/uptime.html">
+            
+                <a href="../tools/uptime.html">
+            
+                    
+                    网站/应用监控工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.39" data-path="../tools/error.html">
+            
+                <a href="../tools/error.html">
+            
+                    
+                    JS错误监视工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.40" data-path="../tools/perf.html">
+            
+                <a href="../tools/perf.html">
+            
+                    
+                    性能工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.41" data-path="../tools/find-tools.html">
+            
+                <a href="../tools/find-tools.html">
+            
+                    
+                    查找工具的工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../frontendmasters.html">
+            
+                <a href="../frontendmasters.html">
+            
+                    
+                    由前端大师赞助
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >了解 DOM、BOM 和 jQuery</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x5B66;&#x4E60;-dom&#x3001;bom-&#x548C;-jquery">&#x5B66;&#x4E60; DOM&#x3001;BOM &#x548C; jQuery</h1>
+<blockquote>
+<p><strong>DOM</strong> - &#x6587;&#x6863;&#x5BF9;&#x8C61;&#x6A21;&#x578B;&#xFF08;DOM&#xFF09;&#x662F;&#x4E00;&#x4E2A;&#x8DE8;&#x5E73;&#x53F0;&#x3001;&#x6CA1;&#x6709;&#x8BED;&#x8A00;&#x4F9D;&#x8D56;&#x7684;&#x89C4;&#x8303;&#xFF0C;&#x5728;HTML&#x3001;XHTML &#x548C; XML &#x6587;&#x6863;&#x4E2D;&#x7528;&#x6765;&#x8868;&#x8FBE;&#x548C;&#x4EA4;&#x4E92;&#x7684;&#x5BF9;&#x8C61;&#x3002;&#x6BCF;&#x4E2A;&#x6587;&#x6863;&#x5185;&#x7684;&#x6240;&#x6709;&#x8282;&#x70B9;&#x88AB;&#x7EC4;&#x7EC7;&#x6210;&#x6811;&#x72B6;&#x7ED3;&#x6784;&#xFF08;DOM &#x6811;&#xFF09;&#x3002;DOM &#x6811;&#x5185;&#x7684;&#x5BF9;&#x8C61;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x5BF9;&#x8C61;&#x65B9;&#x6CD5;&#x8FDB;&#x884C;&#x64CD;&#x4F5C;&#x3002;DOM &#x7684;&#x516C;&#x5171;&#x63A5;&#x53E3;&#x5728;&#x5B83;&#x7684; API &#x4E2D;&#x58F0;&#x660E;&#x3002;</p>
+<p><cite>&#x2014; <a href="https://en.wikipedia.org/wiki/Document_Object_Model" target="_blank">&#x7EF4;&#x57FA;&#x767E;&#x79D1;</a></cite></p>
+<p><strong>BOM</strong> - &#x6D4F;&#x89C8;&#x5668;&#x5BF9;&#x8C61;&#x6A21;&#x578B;&#xFF08;BOM&#xFF09;&#x662F;&#x4E00;&#x4E2A;&#x57FA;&#x4E8E;&#x7279;&#x5B9A;&#x6D4F;&#x89C8;&#x5668;&#x7684;&#x89C4;&#x8303;&#xFF0C;&#x7528;&#x6765;&#x5F15;&#x7528;&#x7F51;&#x7EDC;&#x6D4F;&#x89C8;&#x5668;&#x66B4;&#x9732;&#x7684;&#x6240;&#x6709;&#x5BF9;&#x8C61;&#x3002;&#x4E0E; DOM &#x4E0D;&#x540C;&#xFF0C;BOM &#x6CA1;&#x6709;&#x5E94;&#x7528;&#x6807;&#x51C6;&#x6216;&#x4E25;&#x683C;&#x7684;&#x5B9A;&#x4E49;&#xFF0C;&#x56E0;&#x6B64;&#x6D4F;&#x89C8;&#x5668;&#x5382;&#x5546;&#x53EF;&#x4EE5;&#x6309;&#x81EA;&#x5DF1;&#x7684;&#x610F;&#x613F;&#x5B9E;&#x73B0; BOM&#x3002;</p>
+<p><cite>&#x2014; <a href="https://en.wikipedia.org/wiki/Browser_Object_Model" target="_blank">&#x7EF4;&#x57FA;&#x767E;&#x79D1;</a></cite></p>
+<p><strong>jQuery</strong> - jQuery &#x662F;&#x4E00;&#x4E2A;&#x8DE8;&#x5E73;&#x53F0;&#x7684; Javascript &#x5E93;&#xFF0C;&#x7528;&#x6765;&#x7B80;&#x5316;&#x5BA2;&#x6237;&#x7AEF; HTML &#x7684;&#x811A;&#x672C;&#x3002;jQuery &#x662F;&#x73B0;&#x5728;&#x6700;&#x6D41;&#x884C;&#x7684; Javascript &#x5E93;&#xFF0C;&#x6D4F;&#x89C8;&#x91CF;&#x524D; 1000 &#x4E07;&#x7684;&#x7F51;&#x7AD9;&#x4E2D;&#x6709; 65% &#x4F7F;&#x7528; jQuery&#x3002;jQuery &#x514D;&#x8D39;&#xFF0C;&#x662F;&#x4E00;&#x4E2A;&#x57FA;&#x4E8E; MIT &#x8BC1;&#x4E66;&#x5F00;&#x6E90;&#x7684;&#x8F6F;&#x4EF6;&#x3002;</p>
+<p><cite>&#x2014; <a href="https://en.wikipedia.org/wiki/JQuery" target="_blank">&#x7EF4;&#x57FA;&#x767E;&#x79D1;</a></cite></p>
+</blockquote>
+<p>&#x7406;&#x60F3;&#xFF08;&#x540C;&#x65F6;&#x4E5F;&#x662F;&#x6700;&#x96BE;&#xFF09;&#x7684;&#x5B66;&#x4E60;&#x8DEF;&#x7EBF;&#x662F;&#x5148; Javascript &#x7136;&#x540E; DOM &#x518D; jQuery&#x3002;&#x4E0D;&#x8FC7;&#x4F60;&#x4E5F;&#x53EF;&#x4EE5;&#x6309;&#x81EA;&#x5DF1;&#x7684;&#x65B9;&#x5F0F;&#x6765;&#x3002;&#x5927;&#x591A;&#x6570;&#x524D;&#x7AEF;&#x5F00;&#x53D1;&#x8005;&#x5148;&#x5B66;&#x4E60; Javascript &#x7136;&#x540E;&#x901A;&#x8FC7; jQuery &#x5B66;&#x4E60; DOM&#x3002;&#x65E0;&#x8BBA;&#x91C7;&#x7528;&#x54EA;&#x79CD;&#x65B9;&#x5F0F;&#xFF0C;&#x53EA;&#x8981;&#x786E;&#x4FDD; Javascript&#x3001;DOM &#x548C; jQuery &#x5BF9;&#x4F60;&#x6765;&#x8BF4;&#x4E0D;&#x662F;&#x9ED1;&#x7BB1;&#x5C31;&#x884C;&#x3002;</p>
+<h5 id="&#x5165;&#x95E8;">&#x5165;&#x95E8;:</h5>
+<ul>
+<li><a href="https://www.codecademy.com/tracks/jquery" target="_blank">Codecademy.com jQuery</a> [&#x89C6;&#x9891;]</li>
+<li><a href="http://eloquentjavascript.net/13_dom.html" target="_blank">DOM</a> [&#x56FE;&#x6587;]</li>
+<li><a href="https://www.khanacademy.org/computing/computer-programming/html-css-js" target="_blank">HTML/JS: &#x8BA9;&#x7F51;&#x9875;&#x53EF;&#x4EE5;&#x4EA4;&#x4E92;</a> [&#x89C6;&#x9891;]</li>
+<li><a href="https://www.khanacademy.org/computing/computer-programming/html-js-jquery" target="_blank">HTML/JS: &#x7528; jQuery&#x4F7F;&#x7F51;&#x9875;&#x53EF;&#x4EE5;&#x4EA4;&#x4E92;</a> [&#x89C6;&#x9891;]</li>
+<li><a href="http://jqueryenlightenment.com/" target="_blank">&#x4F60;&#x4E0D;&#x77E5;&#x9053;&#x7684; jQuery</a> [&#x56FE;&#x6587;]</li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction" target="_blank">DOM &#x662F;&#x4EC0;&#x4E48;&#xFF1F;</a> [&#x56FE;&#x6587;]</li>
+</ul>
+<h5 id="&#x8FDB;&#x9636;">&#x8FDB;&#x9636;:</h5>
+<ul>
+<li><a href="http://www.amazon.com/gp/product/1590598563/ref=as_li_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=1590598563&amp;linkCode=as2&amp;tag=fronenddevejo-20&amp;linkId=VQZU5EQIQQXCF56Y" target="_blank">&#x9AD8;&#x7EA7; DOM &#x7F16;&#x7A0B;&#xFF1A;&#x52A8;&#x6001;&#x7F51;&#x9875;&#x8BBE;&#x8BA1;&#x6280;&#x672F; </a> [&#x56FE;&#x6587;][&#x4ED8;&#x8D39;]</li>
+<li><a href="https://frontendmasters.com/courses/javascript-jquery-dom/" target="_blank">&#x4ECE;&#x9AD8;&#x7EA7; JS &#x539F;&#x7406;&#x5230; jQuery &amp; &#x7EAF; DOM &#x7F16;&#x7A0B; </a> [&#x89C6;&#x9891;][&#x4ED8;&#x8D39;]</li>
+<li><a href="https://www.youtube.com/watch?v=Y2Y0U-2qJMs&amp;list=PL5586336C26BDB324&amp;index=2" target="_blank">Douglas Crockford: &#x4E0D;&#x597D;&#x7528;&#x7684;API - DOM &#x7406;&#x8BBA;</a> [&#x89C6;&#x9891;]</li>
+<li><a href="http://www.amazon.com/DOM-Enlightenment-Cody-Lindley/dp/1449342841/" target="_blank">&#x4F60;&#x4E0D;&#x77E5;&#x9053;&#x7684; DOM</a> [&#x56FE;&#x6587;][&#x4ED8;&#x8D39;] or <a href="http://domenlightenment.com/" target="_blank">&#x5728;&#x7EBF;&#x514D;&#x8D39;&#x9605;&#x8BFB;</a></li>
+<li><a href="http://www.pluralsight.com/courses/fixing-common-jquery-bugs" target="_blank">&#x4FEE;&#x590D;&#x5E38;&#x89C1;&#x7684; jQuery &#x9519;&#x8BEF;</a> [&#x89C6;&#x9891;][&#x4ED8;&#x8D39;]</li>
+<li><a href="http://www.pluralsight.com/courses/jquery-free-javascript" target="_blank">&#x6446;&#x8131; jQuery &#x7684; JavaScript &#x7F16;&#x7A0B;</a> [&#x89C6;&#x9891;][&#x4ED8;&#x8D39;]</li>
+<li><a href="http://www.pluralsight.com/courses/jquery-tips-and-tricks" target="_blank">jQuery &#x8D34;&#x58EB;&#x548C;&#x6280;&#x5DE7;</a> [&#x89C6;&#x9891;][&#x4ED8;&#x8D39;]</li>
+</ul>
+<h5 id="&#x53C2;&#x8003;&#x6587;&#x6863;">&#x53C2;&#x8003;&#x6587;&#x6863;:</h5>
+<ul>
+<li><a href="http://api.jquery.com/" target="_blank">jQuery &#x6587;&#x6863;</a></li>
+<li><a href="https://html.spec.whatwg.org/#events-2" target="_blank">&#x4E8B;&#x4EF6;&#x673A;&#x5236;</a></li>
+<li><a href="http://www.webbrowsercompatibility.com/dom/desktop/" target="_blank">DOM &#x6D4F;&#x89C8;&#x5668;&#x652F;&#x6301;</a></li>
+<li><a href="http://www.webbrowsercompatibility.com/dom-events/desktop/" target="_blank">DOM &#x4E8B;&#x4EF6;&#x6D4F;&#x89C8;&#x5668;&#x652F;&#x6301;</a></li>
+<li><a href="http://www.webbrowsercompatibility.com/html-interfaces/desktop/" target="_blank">HTML &#x63A5;&#x53E3;&#x6D4F;&#x89C8;&#x5668;&#x652F;&#x6301;</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model" target="_blank">MDN DOM</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Window" target="_blank">MDN BOM</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model" target="_blank">MDN DOM</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/Events" target="_blank">MDN &#x4E8B;&#x4EF6;&#x53C2;&#x8003;</a></li>
+<li><a href="https://msdn.microsoft.com/en-us/library/hh772384%28v=vs.85%29.aspx" target="_blank">MSDN DOM</a></li>
+</ul>
+<h5 id="&#x6807;&#x51C6;">&#x6807;&#x51C6;:</h5>
+<ul>
+<li><a href="https://www.w3.org/TR/DOM-Level-3-Events/" target="_blank">DOM &#x7B2C;3&#x7AE0;&#xFF1A;&#x4E8B;&#x4EF6;&#x673A;&#x5236;&#x7EC6;&#x5219;</a></li>
+<li><a href="http://www.w3.org/DOM/DOMTR" target="_blank">DOM &#x6280;&#x672F;&#x62A5;&#x544A;</a></li>
+<li><a href="https://dom.spec.whatwg.org/" target="_blank">DOM &#x73B0;&#x884C;&#x89C4;&#x8303;</a></li>
+<li><a href="https://www.w3.org/TR/2015/REC-dom-20151119/" target="_blank">W3C DOM &#x7B2C;4&#x7248;</a></li>
+</ul>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="animation.html" class="navigation navigation-prev " aria-label="Previous page: 了解 Web 动画">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="fonts.html" class="navigation navigation-next " aria-label="Next page: 了解 Web 字体、图标和图像">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"了解 DOM、BOM 和 jQuery","level":"1.6.1.12","depth":3,"next":{"title":"了解 Web 字体、图标和图像","level":"1.6.1.13","depth":3,"path":"learning/fonts.md","ref":"learning/fonts.md","articles":[]},"previous":{"title":"了解 Web 动画","level":"1.6.1.11","depth":3,"path":"learning/animation.md","ref":"learning/animation.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["scripts"],"pluginsConfig":{"scripts":{"files":["./gtm-analytics.js"]},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"myIntro.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"learning/dom.md","mtime":"2018-03-19T04:38:29.377Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-03-29T02:47:53.324Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-scripts/57d8d4d3a20e433f97a8386ca7b4ec72-gtm-analytics.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
